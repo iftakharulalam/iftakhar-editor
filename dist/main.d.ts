@@ -1,2 +1,2 @@
-import { Editor, IAllProps } from './components/Editor';
-export { Editor, IAllProps };
+export { Editor } from './components/Editor';
+export type { IAllProps as EditorProps, InitOptions, Version, } from './components/Editor';

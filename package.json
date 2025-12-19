@@ -1,12 +1,19 @@
 {
   "name": "iftakhar-editor",
-  "version": "1.0.0",
-  "description": "react-editor",
-  "main": "dist/main.cjs.js",
-  "types": "dist/main.d.ts",
-  "module": "dist/main.esm.js",
+  "version": "1.0.1",
+  "description": "react-editor compatible with React 18 and 19",
   "author": "Iftakharul Alam <iftakharul28@gmail.com> (https://iftakharulalam.com)",
   "license": "MIT",
+  "main": "dist/main.cjs.js",
+  "module": "dist/main.esm.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/main.esm.js",
+      "require": "./dist/main.cjs.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "scripts": {
     "build": "rollup -c --bundleConfigAsCjs"
   },
@@ -20,6 +27,9 @@
     "react",
     "typescript",
     "editor",
+    "tinymce",
+    "react-editor",
+    "wysiwyg",
     "iftakhar-editor"
   ],
   "repository": {
@@ -31,12 +41,12 @@
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
     "@types/node": "^20.12.7",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
     "postcss": "^8.4.38",
     "prop-types": "^15.8.1",
-    "react": "^18",
-    "react-dom": "^18",
+    "react": "^18 || ^19",
+    "react-dom": "^18 || ^19",
     "rollup": "^4.16.4",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-typescript2": "^0.36.0",
@@ -46,11 +56,13 @@
     "typescript": "^5.4.5"
   },
   "peerDependencies": {
-    "react": "^18",
-    "react-dom": "^18"
+    "prop-types": "^15.8.1",
+    "react": "^18 || ^19",
+    "react-dom": "^18 || ^19"
   },
   "dependencies": {
-    "eslint-scope": "^5.1.1"
+    "eslint-scope": "^5.1.1",
+    "tslib": "^2.8.1"
   },
   "bugs": {
     "url": "https://github.com/iftakharul28/iftakhar-editor/issues"

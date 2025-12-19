@@ -63,7 +63,7 @@ export declare class Editor extends React.Component<IAllProps> {
     componentDidMount(): void;
     componentWillUnmount(): void;
     render(): React.ReactElement<{
-        ref: React.RefObject<HTMLElement>;
+        ref: React.Ref<HTMLElement>;
         id: string;
         tabIndex: number | undefined;
     }, string | React.JSXElementConstructor<any>>;
